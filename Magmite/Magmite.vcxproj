@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Windows.CppWinRT.2.0.220531.1\build\native\Microsoft.Windows.CppWinRT.props" Condition="Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.220531.1\build\native\Microsoft.Windows.CppWinRT.props')" />
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{eb0dfb58-d32f-493a-8b9b-ff152671e29b}</ProjectGuid>
+    <RootNamespace>Magmite</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);D:\CommonIncludeDirectory\</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SFML_STATIC;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <EnableModules>false</EnableModules>
+      <BuildStlModules>false</BuildStlModules>
+      <AdditionalIncludeDirectories>D:\CommonIncludeDirectory;D:\SFML\SFML_2_6_1\source_code\SFML-2.6.1\include;</AdditionalIncludeDirectories>
+      <TranslateIncludes>false</TranslateIncludes>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+      <ForcedIncludeFiles>
+      </ForcedIncludeFiles>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\SFML\SFML_2_6_1\visual_studio\build\lib;D:\SFML\SFML_2_6_1\source_code\SFML-2.6.1\extlibs\libs-msvc-universal\x64;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;flac.lib;openal32.lib;freetype.lib;winmm.lib;opengl32.lib;user32.lib;gdi32.lib;sfml-audio-s.lib;sfml-graphics-s.lib;sfml-network-s.lib;sfml-window-s.lib;sfml-system-s.lib;sfml-main.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lapi.c" />
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lauxlib.c" />
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lbaselib.c" />
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lcode.c" />
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lcorolib.c" />
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lctype.c" />
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\ldblib.c" />
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\ldebug.c" />
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\ldo.c" />
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\ldump.c" />
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lfunc.c" />
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lgc.c" />
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\linit.c" />
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\liolib.c" />
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\llex.c" />
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lmathlib.c" />
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lmem.c" />
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\loadlib.c" />
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lobject.c" />
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lopcodes.c" />
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\loslib.c" />
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lparser.c" />
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lstate.c" />
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lstring.c" />
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lstrlib.c" />
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\ltable.c" />
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\ltablib.c" />
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\ltm.c" />
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lundump.c" />
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lutf8lib.c" />
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lvm.c" />
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lzio.c" />
+    <ClCompile Include="Behaviour.cpp" />
+    <ClCompile Include="CardScript.cpp" />
+    <ClCompile Include="Component.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClInclude Include="GameManager.hpp" />
+    <ClInclude Include="GameObject.cpp" />
+    <ClCompile Include="GameManager.cpp" />
+    <ClCompile Include="Input.cpp" />
+    <ClCompile Include="LerpScript.cpp" />
+    <ClCompile Include="LuaScript.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainGame.cpp" />
+    <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="ResourceManager.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="Time.cpp" />
+    <ClCompile Include="TPool.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Behaviour.def">
+      <FileType>CppHeader</FileType>
+    </ClInclude>
+    <ClInclude Include="CellTuple.def">
+      <FileType>CppHeader</FileType>
+    </ClInclude>
+    <ClInclude Include="Component.def">
+      <FileType>CppHeader</FileType>
+    </ClInclude>
+    <ClInclude Include="Config.hpp" />
+    <ClInclude Include="ForConstexpr.hpp" />
+    <ClInclude Include="CardScript.hpp" />
+    <ClInclude Include="LerpScript.hpp" />
+    <ClInclude Include="Magmite.hpp" />
+    <ClInclude Include="MainGame.hpp" />
+    <ClInclude Include="StaticCell.def">
+      <FileType>CppHeader</FileType>
+    </ClInclude>
+    <ClInclude Include="Game.def">
+      <FileType>CppHeader</FileType>
+    </ClInclude>
+    <ClInclude Include="GameObject.def">
+      <FileType>CppHeader</FileType>
+    </ClInclude>
+    <ClInclude Include="Input.hpp" />
+    <ClInclude Include="Lua.hpp" />
+    <ClInclude Include="LuaScript.def">
+      <FileType>CppHeader</FileType>
+    </ClInclude>
+    <ClInclude Include="Renderer.def">
+      <FileType>CppHeader</FileType>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.hpp" />
+    <ClInclude Include="Scene.def">
+      <FileType>CppHeader</FileType>
+    </ClInclude>
+    <ClInclude Include="Time.hpp" />
+    <ClInclude Include="Transform.dcl">
+      <FileType>CppHeader</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="all.dcl">
+      <FileType>CppHeader</FileType>
+    </None>
+    <None Include="all.def">
+      <FileType>CppHeader</FileType>
+    </None>
+    <None Include="all.fwd">
+      <FileType>CppHeader</FileType>
+    </None>
+    <None Include="Behaviour.dcl">
+      <FileType>CppHeader</FileType>
+    </None>
+    <None Include="Behaviour.fwd">
+      <FileType>CppHeader</FileType>
+    </None>
+    <None Include="CellTuple.dcl">
+      <FileType>CppHeader</FileType>
+    </None>
+    <None Include="CellTuple.fwd">
+      <FileType>CppHeader</FileType>
+    </None>
+    <None Include="Component.dcl">
+      <FileType>CppHeader</FileType>
+    </None>
+    <None Include="Component.fwd">
+      <FileType>CppHeader</FileType>
+    </None>
+    <None Include="Game.dcl">
+      <FileType>CppHeader</FileType>
+    </None>
+    <None Include="Game.fwd">
+      <FileType>CppHeader</FileType>
+    </None>
+    <None Include="GameObject.dcl">
+      <FileType>CppHeader</FileType>
+    </None>
+    <None Include="GameObject.fwd">
+      <FileType>CppHeader</FileType>
+    </None>
+    <None Include="LuaScript.dcl">
+      <FileType>CppHeader</FileType>
+    </None>
+    <None Include="LuaScript.fwd">
+      <FileType>CppHeader</FileType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Renderer.dcl">
+      <FileType>CppHeader</FileType>
+    </None>
+    <None Include="Renderer.fwd">
+      <FileType>CppHeader</FileType>
+    </None>
+    <None Include="Scene.dcl">
+      <FileType>CppHeader</FileType>
+    </None>
+    <None Include="Scene.fwd">
+      <FileType>CppHeader</FileType>
+    </None>
+    <None Include="StaticCell.dcl">
+      <FileType>CppHeader</FileType>
+    </None>
+    <None Include="StaticCell.fwd">
+      <FileType>CppHeader</FileType>
+    </None>
+    <None Include="Transform.def">
+      <FileType>CppHeader</FileType>
+    </None>
+    <None Include="Transform.fwd">
+      <FileType>CppHeader</FileType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\Microsoft.Windows.CppWinRT.2.0.220531.1\build\native\Microsoft.Windows.CppWinRT.targets" Condition="Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.220531.1\build\native\Microsoft.Windows.CppWinRT.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.220531.1\build\native\Microsoft.Windows.CppWinRT.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Windows.CppWinRT.2.0.220531.1\build\native\Microsoft.Windows.CppWinRT.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.220531.1\build\native\Microsoft.Windows.CppWinRT.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Windows.CppWinRT.2.0.220531.1\build\native\Microsoft.Windows.CppWinRT.targets'))" />
+  </Target>
+</Project>

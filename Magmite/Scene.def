@@ -1,0 +1,81 @@
+#pragma once
+
+#include "all.dcl"
+
+#include "StaticCell.dcl"
+
+//#include "GameObject.def"
+//#include "CellTuple.def"
+
+// #include "Time.hpp"
+
+namespace magmite
+{
+	template <typename T>
+	[[nodiscard]] auto scene::object_of_type_exists(uid_type uid)
+		-> bool
+	{
+		return ecs_container.get_cell_of_type<T>().exists(uid);
+	}
+
+	template <size_t type_id>
+	[[nodiscard]] auto scene::object_of_type_id_exists(uid_type uid)
+		-> bool
+	{
+		return ecs_container.get_cell_by_type_id<type_id>().exists(uid);
+	}
+
+	template <typename T>
+	[[nodiscard]] auto scene::get_object_of_type(uid_type uid)
+		-> auto&
+	{
+		return ecs_container.get_cell_of_type<T>().get(uid);
+	}
+
+	template <size_t type_id>
+	[[nodiscard]] auto scene::get_object_by_type_id(uid_type uid)
+		-> auto&
+	{
+		return ecs_container.get_cell_by_type_id<type_id>().get(uid);
+	}
+
+	template <typename C>
+		requires (not std::is_same_v<C, game_object>)
+	auto scene::add_component(eid_type eid)
+		-> uid_type
+	{
+		auto& game_objects = game_object_cell();
+		auto& cell = ecs_container.get_cell_of_type<C>();
+
+		auto& target_game_object = game_objects.get(eid);
+
+		if (cell.exists(eid))
+		{
+			return eid;
+		}
+
+		cell.alloc(eid);
+
+		component& ref = cell.get(eid);
+
+		ref._game = _game;
+		ref.parent_id(eid);
+
+		return eid;
+	}
+
+	template <typename C>
+		requires (not std::is_same_v<C, game_object>)
+	auto scene::remove_component(eid_type eid)
+		-> uid_type
+	{
+		auto& cell = ecs_container.get_cell_of_type<C>();
+
+		return cell.free(eid);
+	}
+}
+
+
+
+
+

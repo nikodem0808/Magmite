@@ -1,0 +1,48 @@
+#pragma once
+
+#include "all.dcl"
+
+#include <concepts>
+
+
+namespace magmite
+{
+	template <typename T>
+	T& behaviour::get_as()
+	{
+		return *static_cast<T*>(instance);
+	}
+
+	template <typename T, typename... Args>
+	void behaviour::bind(Args&&... args)
+	{
+		if (_destroy_fn != nullptr) _destroy_fn();
+
+		_init_fn = nullptr;
+		_start_fn = nullptr;
+		_update_fn = nullptr;
+		_deinit_fn = nullptr;
+
+		instance = static_cast<void*>(new T(std::forward<Args>(args)...));
+
+		if constexpr (requires (T obj) { { obj.init() } -> std::same_as<void>; })
+		{
+			_init_fn = [this] { static_cast<T*>(instance)->init(); };
+		}
+		if constexpr (requires (T obj) { { obj.start() } -> std::same_as<void>; })
+		{
+			_start_fn = [this] { static_cast<T*>(instance)->start(); };
+		}
+		if constexpr (requires (T obj) { { obj.update() } -> std::same_as<void>; })
+		{
+			_update_fn = [this] { static_cast<T*>(instance)->update(); };
+		}
+		if constexpr (requires (T obj) { { obj.deinit() } -> std::same_as<void>; })
+		{
+			_deinit_fn = [this] { static_cast<T*>(instance)->deinit(); };
+		}
+
+		_destroy_fn = [this] { delete static_cast<T*>(instance); };
+	}
+
+}

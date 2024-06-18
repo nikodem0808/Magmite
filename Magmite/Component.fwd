@@ -1,0 +1,8 @@
+#pragma once
+
+
+namespace magmite
+{
+	struct component;
+}
+

@@ -1,0 +1,64 @@
+#pragma once
+
+#include "all.dcl"
+
+namespace magmite::ecs
+{
+	template <typename T, typename... R>
+	template <typename C>
+	auto cell_tuple<T, R...>::get_cell_of_type()
+		-> static_cell<C>&
+	{
+		if constexpr (std::is_same_v<T, C>)
+		{
+			return cell;
+		}
+		else
+		{
+			return this->base::get_cell_of_type<C>();
+		}
+	}
+
+	template <typename T, typename... R>
+	template <size_t type_id>
+	auto cell_tuple<T, R...>::get_cell_by_type_id()
+		-> auto&
+	{
+		if constexpr (type_id == T::type_id)
+		{
+			return cell;
+		}
+		else
+		{
+			return this->base::get_cell_by_type_id<type_id>();
+		}
+	}
+
+	template <typename T>
+	template <typename C>
+	auto cell_tuple<T>::get_cell_of_type()
+		-> static_cell<C>&
+	{
+		static_assert(
+			std::is_same_v<T, C>,
+			"cell_tuple<size_t, typename...>::get_object_of_type<typename>() : Cell tuple does not contain a cell with components of the specified type"
+			);
+
+		return cell;
+	}
+
+	template <typename T>
+	template <size_t type_id>
+	auto cell_tuple<T>::get_cell_by_type_id()
+		-> auto&
+	{
+		static_assert(
+			type_id == T::type_id,
+			"cell_tuple<typename...>::get_object_by_type_id<size_t>() : Cell tuple does not contain a cell with components of a type with the specified id"
+			);
+
+		return cell;
+	}
+
+}
+

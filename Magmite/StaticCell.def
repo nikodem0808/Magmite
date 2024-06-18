@@ -1,0 +1,83 @@
+#pragma once
+
+#include <array>
+#include <concepts>
+
+#include "all.dcl"
+
+namespace magmite::ecs
+{
+
+	template <typename T>
+	static_cell<T>::static_cell() noexcept
+	{
+		for (auto& elem : uid_map)
+		{
+			elem = invalid_index;
+		}
+	}
+
+	template <typename T>
+	T& static_cell<T>::get(uid_type uid)
+	{
+		return objects[uid_map[uid]];
+	}
+
+	template <typename T>
+	T& static_cell<T>::get_raw(index_type i)
+	{
+		return objects[i];
+	}
+
+	template <typename T>
+	bool static_cell<T>::exists(uid_type uid)
+	{
+		return uid_map[uid] != invalid_index;
+	}
+
+	template <typename T>
+	uid_type static_cell<T>::alloc(uid_type uid)
+	{
+		uid_map[uid] = used_objects;
+		std::destroy_at(&objects[used_objects]);
+		std::construct_at(&objects[used_objects]);
+
+		++used_objects;
+
+		return uid;
+	}
+
+	template <typename T>
+	void static_cell<T>::move_id(uid_type new_uid, uid_type uid)
+	{
+		if (exists(new_uid))
+		{
+			free(new_uid);
+		}
+
+		if (!exists(uid))
+		{
+			return;
+		}
+
+		uid_map[new_uid] = uid_map[uid];
+		uid_map[uid] = invalid_index;
+	}
+
+	template <typename T>
+	bool static_cell<T>::free(uid_type uid)
+	{
+		if (!exists(uid))
+		{
+			return false;
+		}
+
+		--used_objects;
+		std::swap(objects[used_objects], objects[uid_map[uid]]); // [TODO] consider std::move
+		uid_map[uid] = invalid_index;
+
+		return true;
+	}
+}
+
+

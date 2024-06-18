@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Magmite">
+      <UniqueIdentifier>{f10abb0d-6c51-4a0e-8a33-ace872d083e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Magmite\Components">
+      <UniqueIdentifier>{f18a2dc5-9836-44f3-8a0e-d4fdb9db6a09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Magmite\Base">
+      <UniqueIdentifier>{2e8071d4-0c7d-4fe9-952f-32ac822ea4dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Magmite\ControlScheme">
+      <UniqueIdentifier>{9fcdcdef-cee9-482b-8f0d-2db6547c380d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Util">
+      <UniqueIdentifier>{92ab8234-ac70-4148-ad86-083cadc3c8f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lua">
+      <UniqueIdentifier>{5525ed83-99b5-4b60-a818-347f99b39f04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\LuaApi">
+      <UniqueIdentifier>{9c94ba9c-3ece-4420-9759-f3973a1600c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\LuaApi">
+      <UniqueIdentifier>{6a9634c3-fa4f-4644-ad04-41037f7e2b4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Magmite">
+      <UniqueIdentifier>{a5cbb69c-c6c0-4a31-81ae-3b2fd5f8486a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Magmite\Base">
+      <UniqueIdentifier>{a3f20104-94cb-4593-9e2a-d1323e0bead6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Magmite\Components">
+      <UniqueIdentifier>{dbc4d713-d01c-449f-9c9d-4ac3f60e0195}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Magmite\ControlScheme">
+      <UniqueIdentifier>{04841a7a-6167-4c3e-aead-f3083b3e67c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Util">
+      <UniqueIdentifier>{a3ed728f-5d02-48ed-acc6-7d4246cccd63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Magmite\ECS">
+      <UniqueIdentifier>{37bd7847-3ec7-443d-88d1-514dc408f1ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Magmite\Base\GameObject">
+      <UniqueIdentifier>{8f3f9b20-5756-4d0f-9e54-3f9867f5e7d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Magmite\Base\Transform">
+      <UniqueIdentifier>{a174e92f-8aa3-4e01-a094-7ae07c06073b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Magmite\Base\Component">
+      <UniqueIdentifier>{1a041b9a-fb6a-4716-80e3-8e5794457fd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Magmite\Base\Game">
+      <UniqueIdentifier>{89f39fd6-c068-4363-b21a-bf2b9b09c9db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Magmite\Base\Scene">
+      <UniqueIdentifier>{6c297481-7e76-416c-87c0-8908b2bbb901}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Magmite\ECS\CellTuple">
+      <UniqueIdentifier>{7cd50abe-e52e-4558-807d-9839c751be25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Magmite\ECS\StaticCell">
+      <UniqueIdentifier>{048bae6d-f5f7-4e8b-8c97-ea502f10b6a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Magmite\Components\Behaviour">
+      <UniqueIdentifier>{26f99cfb-798a-47f0-a449-c5f188ce50e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Magmite\Components\LuaScript">
+      <UniqueIdentifier>{6aa98f9c-aa8a-4edd-b85f-5d1fb9a0fa83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Magmite\Components\Renderer">
+      <UniqueIdentifier>{77a1555b-9d00-4805-96dc-fdcc014f8579}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameScripts">
+      <UniqueIdentifier>{75f61990-4b5d-41a9-97e0-8526e18c0987}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lapi.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lauxlib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lbaselib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lcode.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lcorolib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lctype.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\ldblib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\ldebug.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\ldo.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\ldump.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lfunc.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lgc.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\linit.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\liolib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\llex.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lmathlib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lmem.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\loadlib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lobject.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lopcodes.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\loslib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lparser.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lstate.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lstring.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lstrlib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\ltable.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\ltablib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\ltm.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lundump.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lutf8lib.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lvm.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lua\lua-5.4.4\src\lzio.c">
+      <Filter>Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="TPool.hpp">
+      <Filter>Header Files\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files\Magmite\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>Source Files\Magmite\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>Source Files\Magmite\ControlScheme</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>Source Files\Magmite\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Behaviour.cpp">
+      <Filter>Source Files\Magmite\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaScript.cpp">
+      <Filter>Source Files\Magmite\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Source Files\Magmite\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Source Files\Magmite\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Time.cpp">
+      <Filter>Source Files\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame.cpp">
+      <Filter>Source Files\GameScripts</Filter>
+    </ClCompile>
+    <ClCompile Include="CardScript.cpp">
+      <Filter>Source Files\GameScripts</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>Source Files\GameScripts</Filter>
+    </ClCompile>
+    <ClCompile Include="LerpScript.cpp">
+      <Filter>Source Files\GameScripts</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Input.hpp">
+      <Filter>Header Files\Magmite\ControlScheme</Filter>
+    </ClInclude>
+    <ClInclude Include="Lua.hpp">
+      <Filter>Header Files\LuaApi</Filter>
+    </ClInclude>
+    <ClInclude Include="Config.hpp">
+      <Filter>Header Files\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="ForConstexpr.hpp">
+      <Filter>Header Files\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.cpp">
+      <Filter>Source Files\Magmite\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Magmite.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.def">
+      <Filter>Header Files\Magmite\Base\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.dcl">
+      <Filter>Header Files\Magmite\Base\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.def">
+      <Filter>Header Files\Magmite\Base\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.def">
+      <Filter>Header Files\Magmite\Base\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.hpp">
+      <Filter>Header Files\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.def">
+      <Filter>Header Files\Magmite\Base\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Time.hpp">
+      <Filter>Header Files\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="CellTuple.def">
+      <Filter>Header Files\Magmite\ECS\CellTuple</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticCell.def">
+      <Filter>Header Files\Magmite\ECS\StaticCell</Filter>
+    </ClInclude>
+    <ClInclude Include="Behaviour.def">
+      <Filter>Header Files\Magmite\Components\Behaviour</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaScript.def">
+      <Filter>Header Files\Magmite\Components\LuaScript</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.def">
+      <Filter>Header Files\Magmite\Components\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame.hpp">
+      <Filter>Source Files\GameScripts</Filter>
+    </ClInclude>
+    <ClInclude Include="CardScript.hpp">
+      <Filter>Source Files\GameScripts</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager.hpp">
+      <Filter>Source Files\GameScripts</Filter>
+    </ClInclude>
+    <ClInclude Include="LerpScript.hpp">
+      <Filter>Source Files\GameScripts</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="all.fwd">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="all.dcl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="all.def">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="GameObject.dcl">
+      <Filter>Header Files\Magmite\Base\GameObject</Filter>
+    </None>
+    <None Include="GameObject.fwd">
+      <Filter>Header Files\Magmite\Base\GameObject</Filter>
+    </None>
+    <None Include="Transform.fwd">
+      <Filter>Header Files\Magmite\Base\Transform</Filter>
+    </None>
+    <None Include="Transform.def">
+      <Filter>Header Files\Magmite\Base\Transform</Filter>
+    </None>
+    <None Include="Component.fwd">
+      <Filter>Header Files\Magmite\Base\Component</Filter>
+    </None>
+    <None Include="Component.dcl">
+      <Filter>Header Files\Magmite\Base\Component</Filter>
+    </None>
+    <None Include="Game.fwd">
+      <Filter>Header Files\Magmite\Base\Game</Filter>
+    </None>
+    <None Include="Game.dcl">
+      <Filter>Header Files\Magmite\Base\Game</Filter>
+    </None>
+    <None Include="Scene.fwd">
+      <Filter>Header Files\Magmite\Base\Scene</Filter>
+    </None>
+    <None Include="Scene.dcl">
+      <Filter>Header Files\Magmite\Base\Scene</Filter>
+    </None>
+    <None Include="CellTuple.dcl">
+      <Filter>Header Files\Magmite\ECS\CellTuple</Filter>
+    </None>
+    <None Include="CellTuple.fwd">
+      <Filter>Header Files\Magmite\ECS\CellTuple</Filter>
+    </None>
+    <None Include="StaticCell.fwd">
+      <Filter>Header Files\Magmite\ECS\StaticCell</Filter>
+    </None>
+    <None Include="StaticCell.dcl">
+      <Filter>Header Files\Magmite\ECS\StaticCell</Filter>
+    </None>
+    <None Include="Behaviour.fwd">
+      <Filter>Header Files\Magmite\Components\Behaviour</Filter>
+    </None>
+    <None Include="Behaviour.dcl">
+      <Filter>Header Files\Magmite\Components\Behaviour</Filter>
+    </None>
+    <None Include="LuaScript.fwd">
+      <Filter>Header Files\Magmite\Components\LuaScript</Filter>
+    </None>
+    <None Include="LuaScript.dcl">
+      <Filter>Header Files\Magmite\Components\LuaScript</Filter>
+    </None>
+    <None Include="Renderer.fwd">
+      <Filter>Header Files\Magmite\Components\Renderer</Filter>
+    </None>
+    <None Include="Renderer.dcl">
+      <Filter>Header Files\Magmite\Components\Renderer</Filter>
+    </None>
+  </ItemGroup>
+</Project>

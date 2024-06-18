@@ -1,0 +1,7 @@
+#pragma once
+
+namespace magmite::ecs
+{
+	template <typename T>
+	struct static_cell;
+}

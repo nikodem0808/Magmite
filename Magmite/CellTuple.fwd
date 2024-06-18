@@ -1,0 +1,9 @@
+#pragma once
+
+
+
+namespace magmite::ecs
+{
+	template <typename... T>
+	struct cell_tuple;
+}

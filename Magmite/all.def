@@ -1,0 +1,19 @@
+#pragma once
+
+
+
+#include "all.dcl"
+
+
+
+
+#include "StaticCell.def"
+#include "CellTuple.def"
+#include "Transform.def"
+#include "Component.def"
+#include "Behaviour.def"
+#include "LuaScript.def"
+#include "Renderer.def"
+#include "GameObject.def"
+#include "Scene.def"
+#include "Game.def"

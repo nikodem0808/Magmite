@@ -1,0 +1,8 @@
+#pragma once
+
+#include "Transform.dcl"
+
+namespace magmite
+{
+	;
+}

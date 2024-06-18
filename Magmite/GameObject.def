@@ -1,0 +1,42 @@
+#pragma once
+
+#include "all.dcl"
+
+namespace magmite
+{
+
+	template <typename C>
+	auto game_object::has_component()
+		-> bool
+	{
+		return _game->active_scene().object_of_type_exists<C>(_id);
+	}
+
+	template <typename C>
+	auto game_object::get_component()
+		-> C&
+	{
+		return _game->active_scene().get_object_of_type<C>(_id);
+	}
+
+	template <typename C>
+	auto game_object::add_component()
+		-> uid_type
+	{
+		return _game->active_scene().add_component<C>(_id);
+	}
+
+	template <typename C>
+	auto game_object::remove_component()
+		-> bool
+	{
+		return _game->active_scene().remove_component(_id);
+	}
+
+	//template <typename T>
+	//[[nodiscard]] inline const auto& get_component_of_type() const
+	//{
+	//	return get_scene().get_object_of_type<T>(_id);
+	//}
+}
+
